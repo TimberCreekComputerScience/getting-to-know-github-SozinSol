@@ -222,6 +222,7 @@ public class f {
 						System.out.println("1. Ignore them");
 						System.out.println("2. Help them");
 						
+						madiline = dave.nextInt();
 						
 						if (madiline == 1)
 						{
@@ -297,6 +298,8 @@ public class f {
 				
 				madiline = dave.nextInt();
 				
+				
+			
 				
 				if (madiline == 1)
 				{
