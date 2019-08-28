@@ -1,335 +1,325 @@
 import java.util.Scanner;
-public class f {
+
+public class story {
 	static Scanner dave = new Scanner(System.in);
+
 	public static void main(String[] args) {
-		
-		
-		
-	int madiline = dave.nextInt();
-	
+
+		System.out.println("Welcome to");
 		System.out.println("Terry Stole My Kidney!");
-		System.out.println("It's a normal day at your job as a stock market anaylist, when sudenly your cubicle colapses");
-	
+		System.out.println("Press 1 to start");
+		int madiline = dave.nextInt();
+
+		System.out.println(
+				"It's a normal day at your job as a stock market anaylist, when sudenly your cubicle colapses");
+
 		System.out.println("Do you");
 		System.out.println("1. Get up and brush it off");
 		System.out.println("2. Get that insurance money and pretend like you're hurt");
-		
+
 		madiline = dave.nextInt();
-		
-		if (madiline == 2)
-		{
-			System.out.println("You pretend like you're hurt and everyone comes to you.. then you get rushed to the hospital");
+
+		if (madiline == 2) {
+			System.out.println(
+					"You pretend like you're hurt and everyone comes to you.. then you get rushed to the hospital");
 			System.out.println("While at the hospital the doctors they ask whats wrong... You say");
 			System.out.println("1. My head hurts so bad son");
-			
-			
-			
+
 			madiline = dave.nextInt();
-			
-			
-			if (madiline == 1)
-			{
+
+			if (madiline == 1) {
 				System.out.println("The doctor imediatly sends you in for a scan they see nothing wrong do you");
 				System.out.println("1. Say you made it up");
 				System.out.println("2. Say your head really hurts still");
-				
+
 				madiline = dave.nextInt();
-				
-				if (madiline == 1)
-				{
-					System.out.println("You said you made it up and now the doctors want to charge you for wasted time, your boss also calls you and fires you meaning no innsurance. Do you");
+
+				if (madiline == 1) {
+					System.out.println(
+							"You said you made it up and now the doctors want to charge you for wasted time, your boss also calls you and fires you meaning no innsurance. Do you");
 					System.out.println("1. Say ok and leave");
 					System.out.println("2. Attack the doctor");
-					
+
 					madiline = dave.nextInt();
-					
-					if (madiline == 1)
-					{
+
+					if (madiline == 1) {
 						System.out.println("Feeling hard on your luck you go to eat something do you go to");
 						System.out.println("1. Popeyes");
 						System.out.println("2. A diner in a bad part of town");
-						
+
 						madiline = dave.nextInt();
-						
-						if (madiline == 1)
-						{
-							System.out.println("The popeyes again ran out of chicken causing an altercation, causing a stray bullet to hit you meaning");
+
+						if (madiline == 1) {
+							System.out.println(
+									"The popeyes again ran out of chicken causing an altercation, causing a stray bullet to hit you meaning");
 							System.out.println("You Are Dead");
+
+							return;
 						}
-						
-						if (madiline == 2)
-						{
-							System.out.println("While at the shady diner you see a man leave his briefcase under one of the seats. Do You");
+
+						if (madiline == 2) {
+							System.out.println(
+									"While at the shady diner you see a man leave his briefcase under one of the seats. Do You");
 							System.out.println("1. Go over and see whats in the brief case");
 							System.out.println("2. Call him out and tell him he left his case");
-							
-						madiline = dave.nextInt();	
-							
-							
-							if (madiline == 1 )
-							{
+
+							madiline = dave.nextInt();
+
+							if (madiline == 1) {
 								System.out.println("When you open the case you see nothing but money do you");
 								System.out.println("1. Rush home");
 								System.out.println("2. Put it in the bank");
-								
+
 								madiline = dave.nextInt();
-								
-								if (madiline == 1)
-								{
+
+								if (madiline == 1) {
 									System.out.println("You rush home do you");
 									System.out.println("1. Put it away and slowly pay off your dept");
-									System.out.println("2. Finnaly indulge yourself in all of the things you've ever wanted");
-									
+									System.out.println(
+											"2. Finnaly indulge yourself in all of the things you've ever wanted");
+
 									madiline = dave.nextInt();
-									
+
 									if (madiline == 1)
-										
+
 									{
-										System.out.println("As you slowly pay your dept you see a new outlook on life and get another job and live normal with just what you need and no bill stress");
-										
+										System.out.println(
+												"As you slowly pay your dept you see a new outlook on life and get another job and live normal with just what you need and no bill stress");
+
+										return;
 									}
-								
+
 									if (madiline == 2)
-										
+
 									{
-										System.out.println("The IRS catches up on your new things causing a audit and 40 years in prison for tax evasion");
-									
+										System.out.println(
+												"The IRS catches up on your new things causing a audit and 40 years in prison for tax evasion");
+										return;
+
 									}
-									
+
 								}
-								
-								if (madiline == 2)
-								{
+
+								if (madiline == 2) {
 									System.out.println("It dosen't take long for the IRS to take notice of your money");
 									System.out.println("80 years in prison is awarded for tax evasion and theft");
-									
-								
+
+									return;
 								}
-								
+
 							}
-							
-							
-							if (madiline == 2)
-							{
-								System.out.println("He looks annoyed but says thanks, when you leave you feel a sharp pain in your side seeing the blood spill makes you realize");
+
+							if (madiline == 2) {
+								System.out.println(
+										"He looks annoyed but says thanks, when you leave you feel a sharp pain in your side seeing the blood spill makes you realize");
 								System.out.println("You Are Dead");
+								return;
 							}
-							
+
 						}
-						
-						
+
 					}
-					
-					if (madiline == 2)
-					{
-						System.out.println("The Doctor is a seasoned martital artist, and with one inhuman punch to throat");
+
+					if (madiline == 2) {
+						System.out.println(
+								"The Doctor is a seasoned martital artist, and with one inhuman punch to throat");
 						System.out.println("You Are Dead");
-					
+						return;
 					}
-					
-					
+
 				}
-				
-				
-				if (madiline == 2)
-				{
-					System.out.println("An apprentice doctor says they've heard of a really rare brain disease called Creuzfeldt jakob disease a very rare one that can't be detected. Do you");
+
+				if (madiline == 2) {
+					System.out.println(
+							"An apprentice doctor says they've heard of a really rare brain disease called Creuzfeldt jakob disease a very rare one that can't be detected. Do you");
 					System.out.println("1. Say nothing");
 					System.out.println("2. Say yes I have that");
-					
+
 					madiline = dave.nextInt();
-					
+
 					if (madiline == 1)
-						
+
 					{
-						System.out.println("The veteran doctor says if its that there is a lot of pain in the future, so you get shipped to a special lab while there they are running tests and say their potential cure might kill you do you");
+						System.out.println(
+								"The veteran doctor says if its that there is a lot of pain in the future, so you get shipped to a special lab while there they are running tests and say their potential cure might kill you do you");
 						System.out.println("1. go for it");
 						System.out.println("2. say no");
-						
+
 						madiline = dave.nextInt();
-						
-						if (madiline == 1)
-						{
-							System.out.println("The treatment does not work because you have no illness, causing researchers to quit the project resulting in anyone with the disease just dying. and oh yeah");
+
+						if (madiline == 1) {
+							System.out.println(
+									"The treatment does not work because you have no illness, causing researchers to quit the project resulting in anyone with the disease just dying. and oh yeah");
 							System.out.println("You Are Dead");
+							return;
 						}
-						
-						
-						if (madiline == 2)
-						{
-							System.out.println("The doctors belive the delusion has set in so they proceed anyway... in conclusion ");
+
+						if (madiline == 2) {
+							System.out.println(
+									"The doctors belive the delusion has set in so they proceed anyway... in conclusion ");
 							System.out.println("You Are Dead");
-							
+							return;
+
 						}
-						
-						
+
 					}
-					
+
 					if (madiline == 2)
-						
+
 					{
-						System.out.println("The doctors look at you with disgust and say how would you know about that if you just got hit today, you say");
+						System.out.println(
+								"The doctors look at you with disgust and say how would you know about that if you just got hit today, you say");
 						System.out.println("1. uhhhhh");
 						System.out.println("2. and i oop..");
-						
+
 						madiline = dave.nextInt();
-						
+
 						if (madiline > 0)
-							
+
 						{
-							System.out.println("The doctor overloads the machine causing radiation in the brain giving you cancer you die with bills to your next of kin");
+							System.out.println(
+									"The doctor overloads the machine causing radiation in the brain giving you cancer you die with bills to your next of kin");
+
+							return;
 						}
 					}
-						
-					
+
 				}
-				
+
 			}
-			
-		
-			
+
 		}
-		
-		
-		
-		if (madiline == 1)
-		{
+
+		if (madiline == 1) {
 			System.out.println("You brush it off and everyone in the office is staring, Do you");
 			System.out.println("1. Say this im tired of this and yell i quit ");
 			System.out.println("2. Go to your supervisor and tell him what happend");
-			
+
 			madiline = dave.nextInt();
-			
-			if (madiline == 1)
-			{
+
+			if (madiline == 1) {
 				System.out.println("Everyone is shocked and gives you looks, Do you");
 				System.out.println("1. Walk out");
 				System.out.println("2. Knock out rick, one of your companys biggest investors");
-				
+
 				madiline = dave.nextInt();
-				
-				if (madiline == 1)
-				{
+
+				if (madiline == 1) {
 					System.out.println("You walk out feeling new you have to go home do you");
 					System.out.println("1. Take the alley thats quicker and you were to scared to use before");
 					System.out.println("2. Run out feeling great and jog home");
-					
-					
-					if (madiline == 1)
-					{
-						
+
+					if (madiline == 1) {
+
 						System.out.println("You go down the alley and see someone getting robbed, Do You");
 						System.out.println("1. Ignore them");
 						System.out.println("2. Help them");
-						
+
 						madiline = dave.nextInt();
-						
-						if (madiline == 1)
-						{
-							System.out.println("As you walk past you hear one of the crooks talking about where they were gonna stash some money. Do You");
+
+						if (madiline == 1) {
+							System.out.println(
+									"As you walk past you hear one of the crooks talking about where they were gonna stash some money. Do You");
 							System.out.println("1. Go to where they were gonna leave their money");
 							System.out.println("2. Call them out for being stupid and giving away their stash spot");
-							
+
 							madiline = dave.nextInt();
-							
-							if (madiline == 1)
-							{
-								System.out.println("You go to the spot which is a diner in a shady part of town a guy at a table leaves a briefcase when you go get it its filled with money you're rich");
+
+							if (madiline == 1) {
+								System.out.println(
+										"You go to the spot which is a diner in a shady part of town a guy at a table leaves a briefcase when you go get it its filled with money you're rich");
+								return;
 							}
-							
-							if (madiline == 2)
-							{
+
+							if (madiline == 2) {
 								System.out.println("The robbers hear you and they stab you.. ");
 								System.out.println("You Are Dead");
+								return;
 							}
 						}
-						
+
 						if (madiline == 2)
-							
+
 						{
 							System.out.println("The crooks had knives.. you get stabed");
 							System.out.println("You Are Dead");
+							return;
 						}
-						
+
 					}
-					
-					
-					
-					if (madiline == 2)
-					{
+
+					if (madiline == 2) {
 						System.out.println("You run into the street and get hit by a bus");
 						System.out.println("You Are Dead");
+						return;
 					}
 				}
-				
-				if (madiline == 2)
-				{
-					
+
+				if (madiline == 2) {
+
 				}
 				System.out.println("Ricks body guard takes you out now the police are taking you in do you");
 				System.out.println("1. Start Crying");
 				System.out.println("2. Fight back");
-				
+
 				madiline = dave.nextInt();
-				
-				if (madiline == 1 )
-					
+
+				if (madiline == 1)
+
 				{
-					System.out.println("Your crying is recorded and by the time you get to prison most people have seen it, you get killed for being a lil b*tch");
+					System.out.println(
+							"Your crying is recorded and by the time you get to prison most people have seen it, you get killed for being a lil b*tch");
 					System.out.println("You Are Dead");
-					
+					return;
+
 				}
-				
-				if (madiline == 2)
-				{
+
+				if (madiline == 2) {
 					System.out.println("The cops shoot you");
 					System.out.println("You Are Dead");
-				
+					return;
+
 				}
-				
-				
-				}
-			
-			if(madiline == 2)
-			{
-				System.out.println("You tell your supervisor what happened.. he says stop being a ho clean it up and be ready for tommorow. Do you");
+
+			}
+
+			if (madiline == 2) {
+				System.out.println(
+						"You tell your supervisor what happened.. he says stop being a ho clean it up and be ready for tommorow. Do you");
 				System.out.println("1. Take up a pen and stab him");
 				System.out.println("2. Say ok and go clean up and get a coffee");
-				
-				madiline = dave.nextInt();
-				
-				
-			
-				
-				if (madiline == 1)
-				{
-					System.out.println("With swiftness you use all of your pent up rage and stab your boss in the neck, with that a rush of euphoria. Do you");
-					System.out.println("1. Go out to the office and declare your victory to the office");
-					System.out.println("2. Go home with a feeling you haven't had since you dreamt of the future as a child");
-					
-					madiline = dave.nextInt();
-					
-					if (madiline == 1)
-						
-					{
-						System.out.println("You declare your victory and the office dose'nt take it well... the security guard shoots you");
-						System.out.println("You Are Dead");
-					}
-					
-					if (madiline == 2)
-					{
-						System.out.println("With this new outlook on life you change your name and move countries before anyone finds you out, you live a quiet life but ruled over by no one");
-					}
-						
-						
-				}
-			
 
-				
+				madiline = dave.nextInt();
+
+				if (madiline == 1) {
+					System.out.println(
+							"With swiftness you use all of your pent up rage and stab your boss in the neck, with that a rush of euphoria. Do you");
+					System.out.println("1. Go out to the office and declare your victory to the office");
+					System.out.println(
+							"2. Go home with a feeling you haven't had since you dreamt of the future as a child");
+
+					madiline = dave.nextInt();
+
+					if (madiline == 1)
+
+					{
+						System.out.println(
+								"You declare your victory and the office dose'nt take it well... the security guard shoots you");
+						System.out.println("You Are Dead");
+						return;
+					}
+
+					if (madiline == 2) {
+						System.out.println(
+								"With this new outlook on life you change your name and move countries before anyone finds you out, you live a quiet life but ruled over by no one");
+						return;
+					}
+
+				}
+
 			}
-	
+
+		}
 
 	}
-
-}
 }
