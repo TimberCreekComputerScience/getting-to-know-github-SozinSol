@@ -1,9 +1,9 @@
 import java.util.Scanner;
-public class story {
-
+public class f {
+	static Scanner dave = new Scanner(System.in);
 	public static void main(String[] args) {
 		
-	Scanner dave = new Scanner(System.in);	
+		
 		
 	int madiline = dave.nextInt();
 	
@@ -21,7 +21,7 @@ public class story {
 			System.out.println("You pretend like you're hurt and everyone comes to you.. then you get rushed to the hospital");
 			System.out.println("While at the hospital the doctors they ask whats wrong... You say");
 			System.out.println("1. My head hurts so bad son");
-			System.out.println("2. My back I can barley feel it");
+			
 			
 			
 			madiline = dave.nextInt();
@@ -186,12 +186,7 @@ public class story {
 				
 			}
 			
-			if (madiline == 2)
-			{
-				System.out.println("They do an x-ray on you just to reveal nothings wrong.. you get kicked out on the steps out of the hospital your boss calls and fires you. Do you");
-				System.out.println("1. Go look for a job to be able to pay rent next month");
-				System.out.println("2. Go walking on the street");
-			}
+		
 			
 		}
 		
@@ -220,8 +215,50 @@ public class story {
 					System.out.println("2. Run out feeling great and jog home");
 					
 					
-					//continue here
+					if (madiline == 1)
+					{
+						
+						System.out.println("You go down the alley and see someone getting robbed, Do You");
+						System.out.println("1. Ignore them");
+						System.out.println("2. Help them");
+						
+						
+						if (madiline == 1)
+						{
+							System.out.println("As you walk past you hear one of the crooks talking about where they were gonna stash some money. Do You");
+							System.out.println("1. Go to where they were gonna leave their money");
+							System.out.println("2. Call them out for being stupid and giving away their stash spot");
+							
+							madiline = dave.nextInt();
+							
+							if (madiline == 1)
+							{
+								System.out.println("You go to the spot which is a diner in a shady part of town a guy at a table leaves a briefcase when you go get it its filled with money you're rich");
+							}
+							
+							if (madiline == 2)
+							{
+								System.out.println("The robbers hear you and they stab you.. ");
+								System.out.println("You Are Dead");
+							}
+						}
+						
+						if (madiline == 2)
+							
+						{
+							System.out.println("The crooks had knives.. you get stabed");
+							System.out.println("You Are Dead");
+						}
+						
+					}
 					
+					
+					
+					if (madiline == 2)
+					{
+						System.out.println("You run into the street and get hit by a bus");
+						System.out.println("You Are Dead");
+					}
 				}
 				
 				if (madiline == 2)
@@ -266,6 +303,22 @@ public class story {
 					System.out.println("With swiftness you use all of your pent up rage and stab your boss in the neck, with that a rush of euphoria. Do you");
 					System.out.println("1. Go out to the office and declare your victory to the office");
 					System.out.println("2. Go home with a feeling you haven't had since you dreamt of the future as a child");
+					
+					madiline = dave.nextInt();
+					
+					if (madiline == 1)
+						
+					{
+						System.out.println("You declare your victory and the office dose'nt take it well... the security guard shoots you");
+						System.out.println("You Are Dead");
+					}
+					
+					if (madiline == 2)
+					{
+						System.out.println("With this new outlook on life you change your name and move countries before anyone finds you out, you live a quiet life but ruled over by no one");
+					}
+						
+						
 				}
 			
 
