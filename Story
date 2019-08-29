@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class story {
+public class f {
 	static Scanner dave = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -290,6 +290,15 @@ public class story {
 				System.out.println("2. Say ok and go clean up and get a coffee");
 
 				madiline = dave.nextInt();
+				
+				if (madiline == 2)
+
+				{
+					System.out.println(
+							"You go to get your coffee and a piece of the ceiling falls out.. so");
+					System.out.println("You Are Dead");
+					return;
+				}
 
 				if (madiline == 1) {
 					System.out.println(
