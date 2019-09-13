@@ -67,14 +67,20 @@ System.out.println("Enter a noun again");
 		
 		String noun2 = dave.nextLine();
 
-		
+		if (adverb2.contains("ly") && adverb3.contains("ly"))
+		{
 		System.out.println("An infraction at school");
 		System.out.println("This is a incident report for" + " " + name ); 
 		System.out.println("It was a normal day in the classroom when another student by the name of" + " " + name2 + " " + "bumped into them causing" + " " + name + " " +"to get aggravated and" + " " + action + " " + name2 + " " + "in the " + " " + bodypart);
 		System.out.println(",causing them to" + " " + verb + " " + ". When I tried to break them up" + " " + name + " " + "called me a  " + " " + adjective2 + " " + noun + " " + "hearing this caused me to" + " " + verb2 + " " +"and the entire class was " + " " + adjective);
 		System.out.println("I then called an administrator but they" + " " + adverb3 + " " + "slipped on a " + " " + noun2 + " " + " causing them to hit their " + " " + bodypart2);		
 		System.out.println(". Since the administrator was" + " " + adjective3 + "," + name + " " + " was " + " " + adverb2 + " " + verbed + " " + " on site.");
-	
+		}
+		else
+		{
+			System.out.println("Put an actual adverb");
+			System.exit(0);
+		}
 		
 		
 	}
