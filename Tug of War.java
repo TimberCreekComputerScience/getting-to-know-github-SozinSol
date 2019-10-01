@@ -1,25 +1,19 @@
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
-public class Meth extends JFrame implements KeyListener {
-
+public class Tugggg extends JPanel implements KeyListener {
 
 	public static void main(String[] args) {
-
-		new Meth().setVisible(true);
-	}
-
-	private Meth() {
-
-		super("Tug Of War");
-		setSize(600, 600);
-		setResizable(false);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-
-
-
+		JFrame f = new JFrame();
+		Tugggg s = new Tugggg();
+		f.add(s);
+		f.setVisible(true);
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.setSize(1300, 800);
 
 	}
 
