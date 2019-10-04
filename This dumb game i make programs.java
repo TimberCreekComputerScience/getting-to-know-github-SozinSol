@@ -1,4 +1,3 @@
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -15,7 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.Timer;
 import javax.swing.WindowConstants;
 
-public class myGame extends JComponent implements ActionListener, MouseMotionListener, KeyListener {
+public class Gamez extends JComponent implements ActionListener, MouseMotionListener, KeyListener {
 
 	private int ballx = 150;
 	private int bally = 30;
@@ -27,7 +26,7 @@ public class myGame extends JComponent implements ActionListener, MouseMotionLis
 	private int bally1Speed = 14;
 	private int ballx1Speed = 10;
 	public int score, score1 = 0;
-    private int scorefinal;
+	private int scorefinal;
 	public int bestscore;
 	public int bestscore1;
 	public boolean gameOver, started;
@@ -35,20 +34,19 @@ public class myGame extends JComponent implements ActionListener, MouseMotionLis
 	public static void main(String[] args) {
 
 		JFrame dave = new JFrame("crack/GamePinfo");
-		myGame g = new myGame();
+		Gamez g = new Gamez();
 		dave.add(g);
 		dave.pack();
 		dave.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		dave.setLocationRelativeTo(null);
 		dave.setVisible(true);
 		dave.addMouseMotionListener(g);
+		dave.setResizable(false);
 
 		Timer tt = new Timer(17, g);
 		tt.start();
 
 	}
-
-
 
 	@Override
 	public Dimension getPreferredSize() {
@@ -58,8 +56,6 @@ public class myGame extends JComponent implements ActionListener, MouseMotionLis
 
 	@Override
 	protected void paintComponent(Graphics g) {
-
-		
 
 		g.setColor(Color.GREEN);
 		g.fillRect(0, 550, 800, 100);
@@ -77,7 +73,7 @@ public class myGame extends JComponent implements ActionListener, MouseMotionLis
 			g.setFont(new Font("Arial", 8, 50));
 			g.drawString(String.valueOf(score), 30 / 1 - 15, 80);
 		}
-		
+
 		g.setColor(Color.white);
 		g.setFont(new Font("Arial", 8, 50));
 
@@ -109,20 +105,17 @@ public class myGame extends JComponent implements ActionListener, MouseMotionLis
 
 		}
 
-
 		if (bally <= 0) {
 
 			ballySpeed = 7;
 
 		}
 
-
 		if (ballx >= 775) {
 
 			ballxSpeed = -5;
 
 		}
-
 
 		if (ballx <= 0) {
 
@@ -147,21 +140,18 @@ public class myGame extends JComponent implements ActionListener, MouseMotionLis
 
 		}
 
-	
 		if (bally1 <= 0) {
 
 			bally1Speed = 14;
 
 		}
 
-	
 		if (ballx1 >= 775) {
 
 			ballx1Speed = -10;
 
 		}
 
-	
 		if (ballx1 <= 0) {
 
 			ballx1Speed = 10;
