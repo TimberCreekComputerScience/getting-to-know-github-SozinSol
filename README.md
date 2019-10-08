@@ -2,7 +2,7 @@
 
 12
 
-The one thing about me that is interesting is my name is Christian Lalachan with a middle initial as D.
+The one thing about me that is interesting is my name is Christian Lalchan with a middle initial as D.
 
 ## What is the read me all about
 
