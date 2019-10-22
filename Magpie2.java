@@ -42,21 +42,29 @@ public class Magpie2
 		{
 			response = "Tell me more about your family.";
 		}
-		else if (statement.indexOf("") >= 0)
+		else if (statement.indexOf("i said no") >= 0)
 		{
-			response = "What was that";
+			response = "Damn chill";
 		}
-		else if (statement.indexOf("") >= 0)
+		else if (statement.indexOf("my mother andi I talked last night") >= 0)
 		{
-			response = "What was that";
+			response = "Thats dope";
 		}
-		else if (statement.indexOf("") >= 0)
+		else if (statement.indexOf("the weather is nice") >= 0)
 		{
-			response = "What was that";
+			response = "then go outside";
 		}
-		else if (statement.indexOf("") >= 0)
+		else if (statement.indexOf("do you know my brother") >= 0)
 		{
-			response = "What was that";
+			response = "No";
+		}
+		else if (statement.indexOf("dog") >= 0)
+		{
+			response = "Tell me more about your pets";
+		}
+		else if (statement.indexOf("cat") >= 0)
+		{
+			response = "Tell me more about your pets";
 		}
 		else
 		{
