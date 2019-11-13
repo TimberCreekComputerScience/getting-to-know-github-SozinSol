@@ -33,7 +33,16 @@ public class Magpie3 {
 		} else if (findKeyword(statement, "mother") >= 0 || findKeyword(statement, "father") >= 0
 				|| findKeyword(statement, "sister") >= 0 || findKeyword(statement, "brother") >= 0) {
 			response = "Tell me more about your family.";
-		} else {
+		} else if(findKeyword(statement, "game") >=0){
+			response = "I like games";
+		}else if(findKeyword(statement, "drug") >=0){
+			response = "As long as it was approved by the FDA";
+		}else if(findKeyword(statement, "youtube") >=0){
+			response = "Sub to Kyle Dencker https://www.youtube.com/channel/UCigYmHOaWaVa_Q-ZeMFrDdA";
+		}else if(findKeyword(statement, "dog") >=0 || findKeyword(statement, "cat") >=0 || findKeyword(statement, "tiger") >=0|| findKeyword(statement, "lion") >=0|| findKeyword(statement, "penguin") >=0){
+			response = "Jeez, I love animals, they're tasty";
+		}
+		else{
 			response = getRandomResponse();
 		}
 		return response;
