@@ -14,23 +14,33 @@ public abstract class Automobile {
 	}
 
 	public void drive(double drove) {
-
-		fuelLevel--;
+		double fuelUsed = drove / milesPerGallon;
+		fuelLevel = fuelUsed;
+		if (fuelLevel < 0) {
+			fuelLevel = 0;
+		}
 
 	}
 
-	public boolean isEmpty(){
-		return true;
+	public boolean isEmpty() {
+		if (fuelLevel == 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	public void fillerUp() {
 		fuelLevel = maxFuel;
 	}
 
+	public int getWheels() {
+		return numOfWheels;
+	}
+
 	public String toString() {
-		
-		
-		return "";
+
+		return "Cug Cug";
 	}
 
 }
