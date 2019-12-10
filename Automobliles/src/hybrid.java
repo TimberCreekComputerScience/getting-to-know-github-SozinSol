@@ -7,8 +7,8 @@ public class hybrid extends Automobile {
 		range = rangee;
 	}
 
-	public int drive(int distance ) {
-		 
+	public int drive(int distance) {
+
 		if (range < 0) {
 			range = range - getFuel;
 		}
@@ -17,5 +17,5 @@ public class hybrid extends Automobile {
 	public String toString() {
 		return "leafy leafy";
 	}
-	
+
 }
