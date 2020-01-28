@@ -1,0 +1,76 @@
+//track
+
+import java.util.*;
+import java.io.*;
+
+
+public class one 
+{
+   public static final double PI = 3.141592653589793;
+
+   public static void main(String[] args)
+   {
+      // Open file
+      Scanner dave = new Scanner(System.in);
+      // Get number of tracks
+      int n = dave.nextInt();
+
+      // Loop over the number of tracks
+      for(int i = 0; i<n; i++)
+      {
+         // Read the track specification
+         int length = dave.nextInt();
+         int r1 = dave.nextInt();
+         int r2 = dave.nextInt();
+         int mackLaps = dave.nextInt();
+         int zackLaps = dave.nextInt();
+
+         // Figure out the distance that Mack and Zack each ran
+         double mdist = mackLaps*(2*length +2*PI*r1);
+         double zdist = zackLaps*(2*length +2*PI*r2);
+
+         // Output th eheader
+         System.out.print("Track #" + (i+1) + ": ");
+
+         // Output the answer
+         System.out.println(mdist > zdist ? "Drats!" : "I've run " + (int)(zdist - mdist + .5) + " more meters than Mack!!!");
+      }
+   }
+}
+
+// price
+
+import java.util.*;
+import java.io.*;
+
+public class one {
+	public static void main(String[] args) throws IOException {
+		Scanner dave = new Scanner(System.in);
+		int t = dave.nextInt();
+		for (int i = 0; i < t; i++) {
+			int n = dave.nextInt();
+			// count the number of times each price occurs
+			int[] freq = new int[1000001];
+			for (int j = 0; j < n; j++) {
+				freq[dave.nextInt()]++;
+			}
+			// find max amount of times any price occurs
+			int max = 0;
+			for (int j = 0; j < 1000001; j++) {
+				if (freq[j] > max) {
+					max = freq[j];
+				}
+			}
+			// print out the price that occurs the max number of times
+			for (int j = 0; j < 1000001; j++) {
+				if (freq[j] == max) {
+					System.out.println("Item #" + (i + 1) + ": Most likely price is " + j + " cents.");
+					System.out.println();
+				}
+			}
+
+		}
+	}
+}
+
+//
