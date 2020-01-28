@@ -1,0 +1,140 @@
+//bar
+
+
+import java.util.*;
+import java.io.*;
+
+public class one {
+   public static void main(String[] args) throws IOException {
+      // Open input file
+      Scanner dave = new Scanner(System.in);
+
+      // Read in number of cases and loop over them
+      int testCases = dave.nextInt();
+      for (int caseOn = 1; caseOn<=testCases; caseOn++) {
+         // Read in the number of checkpoints
+         int checkPoints = dave.nextInt();
+
+         // Read in Gabe's and then Aaron's times for each checkpoint
+         int[] gabeTimes = new int[checkPoints];
+         int[] aaronTimes = new int[checkPoints];
+         for(int i = 0;i<checkPoints;i++){
+            gabeTimes[i] = dave.nextInt();
+         }
+         for(int i = 0;i<checkPoints;i++){
+            aaronTimes[i] = dave.nextInt();
+         }
+
+         // Initally no one is winning and we have no excitement :-(
+         boolean gabeWinning = false;
+         boolean aaronWinning = false;
+         int excitement = 0;
+
+         for (int i = 0;i<checkPoints;i++) {
+            // If Gabe got to this checkpoint first we need to set him 
+            // as the winner; if Aaron was winning before they have 
+            // switched so our answer increases by one
+            if (gabeTimes[i] < aaronTimes[i]) {
+               if (aaronWinning) {
+                  // A switch happened!
+                  excitement++;
+                  aaronWinning = false;
+               }
+
+               // Gabe is winning
+               gabeWinning = true;
+            }
+
+            // But if Aaron got to this checkpoint first we need to set 
+            // him as the winner; if Gabe was winning before they 
+            // have switched so our answer increases by one
+            else if (aaronTimes[i] < gabeTimes[i]) {
+               if (gabeWinning) {
+                  // Gabe was winning but now Aaron is now!
+                  excitement++;
+                  gabeWinning = false;
+               }
+
+               // Aaron is winning
+               aaronWinning = true;
+            }
+         }
+
+         // Output final answer
+         System.out.printf("Video #%d: %d%n", caseOn, excitement);
+      }
+
+      // Close file
+      dave.close();
+   }
+}
+
+
+//dinner
+
+
+import java.util.Scanner;
+import java.io.File;
+
+public class one { 
+   public static void main(String[] args) throws Exception {
+      // We're going to precompute the answers beforehand
+      long[] ways = new long[110];
+   
+      // There is one way to pay a bill of $0
+      ways[0] = 1;
+   
+      // Then we build up our answers
+      for (int i = 0; i < 100; i++) {
+         // From our current amount, we can lay down a $2, $5, or $10
+         ways[i + 2] += ways[i];
+         ways[i + 5] += ways[i];            
+         ways[i + 10] += ways[i];      
+      }
+
+      // Now we read from the input to get the cases
+      Scanner dave = new Scanner(System.in);
+      int testCases = dave.nextInt();
+   
+      // Process each test case   
+      for (int caseNumber = 1; caseNumber <= testCases; caseNumber++) {
+         // Get the bill amount
+         int amount = dave.nextInt();
+      
+         // Print out the ways to reach that amount
+         System.out.printf("Dinner #%d: %d%n", caseNumber, ways[amount]);
+      }
+
+      // Close file
+      dave.close();
+   }
+}
+
+//absolute
+
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class one {
+   public static void main(String[] args) throws IOException
+   {
+      // Open file for input
+      Scanner dave = new Scanner(System.in);
+
+      // Read in number of test cases
+      int T = dave.nextInt();
+      for (int t = 0; t < T; t++)
+      {
+         // Read in the number and then output its negative form
+         int n = dave.nextInt();
+         System.out.printf("Integer #%d: %d%n", t+1, -Math.abs(n));
+      }
+
+      // Close file
+      dave.close();
+   }
+}
+
+//
