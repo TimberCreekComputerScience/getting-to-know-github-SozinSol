@@ -1,34 +1,25 @@
 //digit sums
-/* DIGIT SUMS
- * 
- * Given a number find the sum of all of its digits, and determine whether the sum is evenly divisible by 25 or not.
- */
-
-import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 
 public class one {
+static Scanner dave = new Scanner(System.in);
 	public static void main (String[] args)  {
-		Scanner dave = new Scanner(System.in);
 		
-		int n = dave.nextInt();	//The number of cases in the input file
+		int fool = dave.nextInt();	
 		
-		for (int i=0; i<n; i++) {
-			int x = dave.nextInt();	//The current number to check
-			int sum = 0;			//The running sum of the digits of x
-			
-			//This loop runs 1 iteration for each digit in x, quitting when all digits have been processed 
-			//or only 0's remain (in both cases x == 0)
-			while (x > 0) {
-				sum += x%10;		//Add the rightmost (least significant) digit to the running sum
-				x /= 10;			//We don't need this digit any more, so drop it
+		for (int i=0; i<fool; i++) {
+			int a = 0;
+			int b = dave.nextInt();	
+		
+			while (b > 0) {
+				a += b%10;	
+				b /= 10;			
 			}
 			
-			//Now "sum" contains the sum of all the digits of x
-			
-			if (sum % 25 == 0)		//The sum is divisible by 25
+			if (a % 25 == 0){		
 				System.out.println("Yes, it's 25!!!");
-			else					//The sum is not divisible by 25
+				}
+			else					
 				System.out.println("Bummer, no 25.");
 		}
 	}
@@ -36,126 +27,50 @@ public class one {
 
 //stapler
 
-import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 public class one {
-	public static int MAX_STACK = 30;
+static Scanner dave = new Scanner(System.in);
 	public static void main(String[] Args)  {
-		Scanner dave = new Scanner(System.in);
+	
+		int fool = dave.nextInt();
 		
-		//read in the total number of cases
-		int num_cases = dave.nextInt();
-		
-		//loop through all cases
-		for(int count = 1; count <= num_cases; count++) {
+		for(int i = 1; i <= fool; i++) {
+			int a = dave.nextInt();
+			int b = 0;
 			
-			//read in the amount of stacks
-			int num_amounts = dave.nextInt();
-			
-			//initialize the stack size
-			int stack_size = 0;
-			
-			//count up all the stack sizes
-			for(int amount_index = 0; amount_index < num_amounts; amount_index++) {
+			for(int j = 0; j < a; j++) {
 				
-				//read in stack size and add it
-				int current_amount = dave.nextInt();
-				stack_size = stack_size+ current_amount;
+				int c = dave.nextInt();
+				b += c;
 			}
 			
-			//output result
-			if(stack_size > MAX_STACK){
+			
+			if(b > 30){
 				
 				//case where there are too many pages
-				System.out.printf("Battle #%d:%n", count);
-				System.out.printf("The Stapler must face %d pages%n", stack_size);
-				System.out.printf("Foiled again!%n");
+				System.out.println("Battle #", count);
+				System.out.println("The Stapler must face"  "pages", stack_size);
+				System.out.println("Foiled again!");
 			}
 			else {
 
 				//case where the stapler was successful
-				System.out.printf("Battle #%d:%n", count);
-				System.out.printf("The Stapler must face %d pages%n", stack_size);
-				System.out.printf("The Stapler saves the day!%n");
+				System.out.println("Battle #", count);
+				System.out.println("The Stapler must face" "pages", stack_size);
+				System.out.println("The Stapler saves the day!");
 			}
 			
 			//output new line if we are not on the last case
-			if(count != num_cases) {
+			if(count != fool) {
 				
-				System.out.printf("%n");
+				System.out.println("%n");
 			}
 		}
 	}
 }
 
-//ice fish
-// Arup Guha
-// 3/26/2011
-// Solution to 2011 UCF High School Programming Contest Problem: Mice
 
-// Given a circular pond with a circular part cut out, determine the
-// largest 2x by x rectangle that can be allocated within the pond
-// without intersecting the the circular part.
 
-import java.util.*;
-import java.io.*;
-
-public class one {
-
-    public static void main(String[] args) throws IOException {
-
-        // Open the input file.
-        Scanner dave = new Scanner(System.in);
-
-        int numPonds = dave.nextInt();
-
-        // Go through each pond.
-        for (int loop=1; loop<=numPonds; loop++) {
-
-            int rPond, rHole, xHole, yHole;
-
-            // Get all the input for this case.
-            rPond = dave.nextInt();
-            rHole = dave.nextInt();
-            xHole = dave.nextInt();
-            yHole = dave.nextInt();
-
-            // Calculate the distance from the center of the hole to the center of the pond.
-            double dToCenter = Math.sqrt(xHole*xHole + yHole*yHole);
-
-            // Output header.
-            System.out.printf("Pond #%d:\n", loop);
-
-            // The hole doesn't interfere here. The optimal rectangle is centered at (0,0)
-            // with dimensions 2r/sqrt(5) by 4r/sqrt(5). Basically, just draw a rectangle
-            // centered at the middle with a ratio of sides 2 to 1. You'll find that the
-            // distance from the center of the circle to the center of either short side
-            // is r/sqrt(5). If our circle is completely outside of that, we're good!!!
-            if (dToCenter >= rPond/Math.sqrt(5) + rHole)
-                System.out.printf("ICE CLEAR!!! %.2f\n", 8.0*rPond*rPond/5);
-
-            // This is a difficult case to draw out. In fact, there are two drawings, one
-            // for when x > 0 and another for x < 0. Though the drawings are different,
-            // they lead to the same exact quadratic equation. The positive root of that
-            // equation is the length of the shorter side of the rectangle. Thus, the area
-            // is 2 times that side squared.
-            else {
-                double x = dToCenter - rHole;
-                double y = quadBigRoot(2, -2*x, x*x-rPond*rPond);
-                System.out.printf("OBSTRUCTION! %.2f\n", 2*y*y);
-            }
-
-            System.out.printf("\n");
-
-        }
-    }
-
-    // Pre-condition: b^2 - 4ac >= 0, ie. the roots of the quadratic are real.
-    // Post-condition: Returns the larger of the two roots.
-    public static double quadBigRoot(double a, double b, double c) {
-        return (-b + Math.sqrt(b*b-4*a*c))/(2*a);
-    }
-}
 
 
 
