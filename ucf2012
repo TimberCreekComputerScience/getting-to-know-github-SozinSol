@@ -2,70 +2,43 @@
 
 import java.util.Scanner;
 
-public class one 
-{
-static Scanner dave = new Scanner(System.in);
-public static void main(String[] args)
-   {
-   
+public class track {
+	static Scanner dave = new Scanner(System.in);
 
-      int fool = dave.nextInt();
+	public static void main(String[] args){
 
-      for(int i = 0; i<fool; i++)
-      {
-         // Read the track specification
-         int length = dave.nextInt();
-         int r1 = dave.nextInt();
-         int r2 = dave.nextInt();
-         int mackLaps = dave.nextInt();
-         int zackLaps = dave.nextInt();
+		int fool = dave.nextInt();
 
-         // Figure out the distance that Mack and Zack each ran
-         double mdist = mackLaps*(2*length +2*3.141592653589793*r1);
-         double zdist = zackLaps*(2*length +2*3.141592653589793*r2);
+		for (int i = 0; i < fool; i++) {
 
-         // Output th eheader
-         System.out.print("Track #" + (i+1) + ": ");
+			int length = dave.nextInt();
+			int a = dave.nextInt();
+			int b = dave.nextInt();
+			int mack = dave.nextInt();
+			int zack = dave.nextInt();
 
-         // Output the answer
-         System.out.println(mdist > zdist ? "Drats!" : "I've run " + (int)(zdist - mdist + .5) + " more meters than Mack!!!");
-      }
-   }
+			double m = mack * (2 * length + 2 * 3.141592653589793 * a);
+			double z = zack * (2 * length + 2 * 3.141592653589793 * b);
+
+			
+			int ye =0;
+			if(m<z) {
+				System.out.print("Track #" + (ye+1) + ": ");
+				System.out.println("I've run " + (int) (z - m + .5) + " more meters than Mack!!!");
+				ye++;
+			}
+			if(z>m) {
+				System.out.print("Track #" + (ye+1) + ": ");
+				System.out.println("Drats!");
+				ye++;
+				
+			}
+			
+		}
+	}
 }
 
 // price
 
-import java.util.*;
-import java.io.*;
-
-public class one {
-	public static void main(String[] args) throws IOException {
-		Scanner dave = new Scanner(System.in);
-		int t = dave.nextInt();
-		for (int i = 0; i < t; i++) {
-			int n = dave.nextInt();
-			// count the number of times each price occurs
-			int[] freq = new int[1000001];
-			for (int j = 0; j < n; j++) {
-				freq[dave.nextInt()]++;
-			}
-			// find max amount of times any price occurs
-			int max = 0;
-			for (int j = 0; j < 1000001; j++) {
-				if (freq[j] > max) {
-					max = freq[j];
-				}
-			}
-			// print out the price that occurs the max number of times
-			for (int j = 0; j < 1000001; j++) {
-				if (freq[j] == max) {
-					System.out.println("Item #" + (i + 1) + ": Most likely price is " + j + " cents.");
-					System.out.println();
-				}
-			}
-
-		}
-	}
-}
 
 //
