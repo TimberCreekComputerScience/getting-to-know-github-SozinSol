@@ -62,4 +62,30 @@ public class heart {
 }
 
 
-//
+//chairs
+
+import java.util.Scanner;
+
+public class chairs {
+	static Scanner dave = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		int fool = dave.nextInt();
+
+		for (int i = 0; i < fool; i++) {
+
+			int a = dave.nextInt();
+			int b = dave.nextInt();
+
+			int elim = a - b;
+
+			System.out.println("Round #" + (i + 1) + ": " + elim + " children eliminated");
+
+		}
+
+	}
+
+}
+
+
