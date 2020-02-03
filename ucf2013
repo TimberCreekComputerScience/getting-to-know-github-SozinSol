@@ -1,35 +1,39 @@
 //cosmic
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class cosmic {
 	static Scanner dave = new Scanner(System.in);
 
 	public static void main(String[] args) {
+
 		int fool = dave.nextInt();
-		for (int i = 0; i < fool; i++) {
+
+		for (int i = 1; i <= fool; i++) {
 
 			int a = dave.nextInt();
 			int b = dave.nextInt();
+			int c = 0;
 
-			if (a < b) {
+			for (int j = 0; j < a * b; j++) {
 
-				int temp = 0;
+				if (j % a != 0 || j % b != 0) {
 
-				temp = a;
-				a = b;
-				b = temp;
-
+					if (j % a == 0)
+						c++;
+					if (j % b == 0)
+						c++;
+				}
 			}
-			
-			double crack = (double)b /a;
-			
-			crack *= 100;
 
-			System.out.println("Universe #" +( i + 1) + ":" + " There's a " + crack + "% chance we'll survive!");
+			double d = (c / (double) (a * b)) * 100;
+			double life = 100 - d;
+			DecimalFormat k = new DecimalFormat("#.0000");
+			System.out
+					.println("Universe #" + (i + 1) + ":" + " There's a " + k.format(life) + "% chance we'll survive!");
 		}
 
 	}
-
 }
 
 // heart
