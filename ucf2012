@@ -40,5 +40,39 @@ public class track {
 
 // price
 
+import java.util.Scanner;
 
-//
+public class price {
+	static Scanner dave = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		int fool = dave.nextInt();
+
+		for (int i = 0; i < fool; i++) {
+			int a = dave.nextInt();
+
+			int[] pr = new int[100000000];
+			for (int j = 0; j < a; j++) {
+				pr[dave.nextInt()]++;
+			}
+
+			int max = 0;
+			for (int j = 0; j < 100000000; j++) {
+				if (pr[j] > max) {
+					max = pr[j];
+				}
+			}
+
+			for (int j = 0; j < 100000000; j++) {
+				if (pr[j] == max) {
+					System.out.println("Item #" + (i + 1) + ": Most likely price is " + j + " cents.");
+
+				}
+			}
+
+		}
+	}
+}
+
+
+
