@@ -62,4 +62,22 @@ public class stapler {
 	}
 }
 
+//tower
+
+import java.util.Scanner;
+
+public class cloud {
+	static Scanner dave = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		int fool = dave.nextInt();
+
+		for (int i = 0; i < fool; i++) {
+			int t = dave.nextInt();
+			System.out.println(t);
+
+		}
+
+	}
+}
 
