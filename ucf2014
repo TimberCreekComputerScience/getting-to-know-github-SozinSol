@@ -50,3 +50,24 @@ public class crease {
 	}
 }
 
+//tingling
+
+import java.util.*;
+
+public class tingling {
+
+	static Scanner dave = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		int fool = dave.nextInt();
+		for (int i = 1; i <= fool; i++) {
+			String name = dave.next();
+			double area = dave.nextDouble();
+			double radius = area / Math.sqrt(3.141592653589793);
+			radius = (double) Math.round(radius * 1000d) / 1000d;
+			System.out.println(name + " is " + radius + " feet away.");
+		}
+
+	}
+}
