@@ -1,0 +1,48 @@
+// thirty
+
+import java.util.Scanner;
+
+public class thirty {
+	static Scanner dave = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		int fool = dave.nextInt();
+
+		for (int i = 0; i < fool; i++) {
+
+			int a = dave.nextInt();
+			a /= 2;
+
+			System.out.println(a /= 3);
+		}
+
+	}
+
+}
+
+//moes
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class moes {
+	static Scanner dave = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		ArrayList<String> a = new ArrayList<String>();
+		int fool = dave.nextInt();
+		for (int i = 1; i <= fool; i++) {
+			String b = dave.next();
+			if (a.contains(b)) {
+
+				System.out.println("Customer #" + i + ": **continue working**");
+			} else {
+
+				a.add(b);
+				System.out.println("Customer #" + i + ": Welcome to Moe's!!!");
+			}
+		}
+	}
+}
