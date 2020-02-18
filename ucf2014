@@ -33,22 +33,21 @@ public class crease {
 			int b = dave.nextInt();
 
 			if (a > b) {
-				int temp = 0;
-				temp = a;
+				int temp = a;
 				a = b;
 				b = temp;
 			}
 
 			double pythag = Math.sqrt(a * a + b * b);
 
-			double mathsHoe = a * pythag / b;
+			double done = a * pythag / b;
 
-			mathsHoe = (double) Math.round(mathsHoe * 100d) / 100d;
-			System.out.println("Crease #" + i + ": " + mathsHoe);
+			System.out.printf("Crease #%d: %.2f%n", i, done);
 		}
 
 	}
 }
+
 
 //tingling
 
