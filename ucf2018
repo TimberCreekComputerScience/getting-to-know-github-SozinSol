@@ -1,0 +1,21 @@
+//gifts
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class gifts {
+	static Scanner dave = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		int fool = dave.nextInt();
+		for (int i = 0; i < fool; i++) {
+			int[] a = { dave.nextInt(), dave.nextInt(), dave.nextInt() };
+			Arrays.sort(a);
+
+			System.out.println(Math.min(a[1] - a[0], a[2] - a[1]));
+		}
+	}
+}
+
+//
