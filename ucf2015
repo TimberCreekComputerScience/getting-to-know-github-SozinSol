@@ -1,0 +1,86 @@
+//eggs
+
+import java.util.Scanner;
+
+public class eggs {
+	static Scanner dave = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		int a = dave.nextInt();
+		for (int i = 1; i <= a; i++) {
+			int age = dave.nextInt();
+			int b = dave.nextInt();
+
+			if (b == 350000) {
+				System.out.println("Breakfast #" + i + ": 0");
+			}
+
+			else if (age < 18) {
+				System.out.println("Breakfast #" + i + ": 4");
+			}
+
+			else {
+				System.out.println("Breakfast #" + i + ": 5");
+			}
+		}
+	}
+}
+
+
+//hoo
+
+import java.util.Scanner;
+
+public class hoo {
+	static Scanner dave = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		int fool = dave.nextInt();
+		for (int i = 1; i <= fool; i++) {
+			int a = dave.nextInt();
+			int b = 0;
+			while (a > 1) {
+
+				for (int j = 2; j <= a; j++) {
+					if (a % j == 0) {
+
+						b++;
+						a /= j;
+						break;
+					}
+				}
+			}
+			if (b <= 3) {
+				System.out.println("Pop #" + i + ": " + b + " licks? Your goose is cooked!");
+			} else {
+				System.out.println("Pop #" + i + ": " + "A-one... A-two-HOO... A-" + b + ".");
+			}
+		}
+	}
+}
+
+//fractal
+
+import java.util.Scanner;
+
+public class fractal {
+	static Scanner dave = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		int fool = dave.nextInt();
+
+		for (int i = 1; i <= fool; i++) {
+			int a = dave.nextInt();
+			int b = dave.nextInt();
+
+			if (a + b > 0)
+				System.out.println("Fraction #" + i + ": " + Math.sqrt(a + b));
+			else
+				System.out.println("Fraction #" + i + ":" + " DNE");
+		}
+
+	}
+}
