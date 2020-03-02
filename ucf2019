@@ -1,0 +1,27 @@
+// doubling
+
+import java.util.Scanner;
+
+public class doubling {
+	static Scanner dave = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		int fool = dave.nextInt();
+
+		for (int i = 0; i < fool; i++) {
+
+			int a = dave.nextInt();
+			int b = a;
+
+			a *= 2;
+			a /= 10;
+			int done = b - a;
+
+			System.out.println("Trade #" + (i+1) + ": " + done);
+		}
+
+	}
+}
+
+//
