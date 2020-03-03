@@ -17,4 +17,74 @@ public class power {
 
 }
 
-//
+//burrito
+
+import java.util.Scanner;
+
+public class burrito {
+	static Scanner dave = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		int fool = dave.nextInt();
+
+		for (int i = 1; i <= fool; i++) {
+			int v = dave.nextInt();
+			int r = dave.nextInt();
+			int w = dave.nextInt();
+			int l = dave.nextInt();
+
+			double circum = 3.141592653589793 * r * 2.0;
+			double buro = ((double) v) / r / r / 3.141592653589793;
+			boolean fit = false;
+
+			if (w >= buro + r + r && l >= circum) {
+				fit = true;
+			}
+			if (l >= buro + r + r && w >= circum) {
+				fit = true;
+			}
+
+			if (fit) {
+				System.out.println("Burrito #" + i + ": " + "Don't worry, the burrito fits!");
+			} else {
+				System.out.println("Burrito #" + i + ": " + "Looks like a cold burrito today.");
+			}
+		}
+	}
+	
+	//knights
+	
+	import java.util.Scanner;
+
+public class knights {
+	static Scanner dave = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		int fool = dave.nextInt();
+
+		for (int i = 0; i < fool; i++) {
+
+			String a = dave.next();
+			String b = a;
+
+			if (a.contains("1")) {
+				b += " knights";
+			}
+			if (a.contains("9") || a.contains("8") || a.contains("7") || a.contains("6") || a.contains("5")) {
+
+				b += " pirates";
+			}
+			if (a.contains("0")) {
+				b += " ninjas";
+			}
+
+			System.out.println(b);
+
+		}
+
+	}
+
+}
+
