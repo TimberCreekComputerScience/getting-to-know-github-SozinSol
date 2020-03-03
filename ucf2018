@@ -18,4 +18,29 @@ public class gifts {
 	}
 }
 
-//
+//fort
+
+import java.util.Scanner;
+
+public class fort {
+	static Scanner dave = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		int fool = dave.nextInt();
+		dave.nextLine();
+		for (int i = 0; i < fool; i++) {
+
+			String a = dave.nextLine();
+
+			if (a.equals("hey guys"))
+				System.out.println(a);
+			else
+				System.out.println("buzz");
+		}
+	}
+}
+
+//pizza
+
+
