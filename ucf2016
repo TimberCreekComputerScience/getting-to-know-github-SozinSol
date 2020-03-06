@@ -46,3 +46,99 @@ public class moes {
 		}
 	}
 }
+
+//two
+
+import java.util.Scanner;
+
+public class two {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+
+		int T = scan.nextInt();
+		while (T-- > 0) {
+			int input = scan.nextInt();
+
+			boolean foundNext = false;
+
+			int candidate = input + 1;
+
+			while (!foundNext) {
+				String StrCan = Integer.toString(candidate);
+
+				for (int i = 1; i <= StrCan.length() - 1; i++) {
+
+					int start = Integer.parseInt(StrCan.substring(0, i));
+					int end = Integer.parseInt(StrCan.substring(i, StrCan.length()));
+
+					if (Integer.bitCount(start) == 1 && Integer.bitCount(end) == 1) {
+
+						for (int k = 0; k < 25; k++) {
+							if (Integer.bitCount(candidate + (1 << k)) == 1) {
+								foundNext = true;
+								System.out.println("The next hyper-even after " + input + " is " + candidate);
+								break;
+							}
+						}
+					}
+					if (foundNext)
+						break;
+				}
+				candidate++;
+			}
+		}
+		scan.close();
+	}
+}
+
+//guesing
+
+import java.util.Scanner;
+
+public class guessing {
+	static Scanner in = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		int n = in.nextInt();
+
+		for (int curGame = 1; curGame <= n; ++curGame) {
+
+			int a = in.nextInt();
+
+			int b = in.nextInt();
+
+			int x = in.nextInt();
+
+			int lowerBound = a;
+			int upperBound = b;
+
+			int guessCount = 0;
+
+			while (true) {
+
+				int mid = (lowerBound + upperBound + 1) / 2;
+
+				++guessCount;
+
+				if (mid == x) {
+					break;
+				} else if (mid > x) {
+					upperBound = mid - 1;
+				} else {
+					lowerBound = mid + 1;
+				}
+			}
+
+			if (guessCount > 1) {
+				System.out.println("Game #" + curGame + ": " + guessCount + " guesses");
+			} else {
+				System.out.println("Game #" + curGame + ": 1 guess");
+			}
+		}
+
+	}
+
+}
+
+
