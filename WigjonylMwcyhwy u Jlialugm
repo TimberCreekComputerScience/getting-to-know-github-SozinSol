@@ -1,0 +1,39 @@
+//countLetters
+
+
+public class countLetter {
+	
+
+	public static void main(String[] args) {
+
+		String a = "Dencker";
+		a.toLowerCase();
+		int count[] = new int[256];
+
+		int leng = a.length();
+
+		for (int i = 0; i < leng; i++) {
+			count[a.charAt(i)]++;
+
+		}
+		char ch[] = new char[a.length()];
+		for (int i = 0; i < leng; i++) {
+			ch[i] = a.charAt(i);
+			int find = 0;
+			for (int j = 0; j <= i; j++) {
+
+				if (a.charAt(i) == ch[j]) {
+					find++;
+
+				}
+
+			}
+			if (find == 1) {
+				System.out.println(a.toLowerCase().charAt(i) + " = " + count[a.charAt(i)]);
+
+			}
+
+		}
+
+	}
+}
