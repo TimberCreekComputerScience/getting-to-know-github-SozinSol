@@ -52,42 +52,43 @@ public class moes {
 import java.util.Scanner;
 
 public class two {
+	static Scanner dave = new Scanner(System.in);
+
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
 
-		int T = scan.nextInt();
-		while (T-- > 0) {
-			int input = scan.nextInt();
+		int a = dave.nextInt();
+		while (a-- > 0) {
+			int b = dave.nextInt();
 
-			boolean foundNext = false;
+			boolean c = false;
 
-			int candidate = input + 1;
+			int d = b + 1;
 
-			while (!foundNext) {
-				String StrCan = Integer.toString(candidate);
+			while (!c) {
+				String e = Integer.toString(d);
 
-				for (int i = 1; i <= StrCan.length() - 1; i++) {
+				for (int i = 1; i <= e.length() - 1; i++) {
 
-					int start = Integer.parseInt(StrCan.substring(0, i));
-					int end = Integer.parseInt(StrCan.substring(i, StrCan.length()));
+					int start = Integer.parseInt(e.substring(0, i));
+					int end = Integer.parseInt(e.substring(i, e.length()));
 
 					if (Integer.bitCount(start) == 1 && Integer.bitCount(end) == 1) {
 
-						for (int k = 0; k < 25; k++) {
-							if (Integer.bitCount(candidate + (1 << k)) == 1) {
-								foundNext = true;
-								System.out.println("The next hyper-even after " + input + " is " + candidate);
+						for (int j = 0; j < 25; j++) {
+							if (Integer.bitCount(d + (1 << j)) == 1) {
+								c = true;
+								System.out.println("The next hyper-even after " + b + " is " + d);
 								break;
 							}
 						}
 					}
-					if (foundNext)
+					if (c)
 						break;
 				}
-				candidate++;
+				d++;
 			}
 		}
-		scan.close();
+
 	}
 }
 
@@ -96,49 +97,43 @@ public class two {
 import java.util.Scanner;
 
 public class guessing {
-	static Scanner in = new Scanner(System.in);
+	static Scanner dave = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
-		int n = in.nextInt();
+		int fool = dave.nextInt();
 
-		for (int curGame = 1; curGame <= n; ++curGame) {
+		for (int i = 1; i <= fool; ++i) {
 
-			int a = in.nextInt();
-
-			int b = in.nextInt();
-
-			int x = in.nextInt();
-
-			int lowerBound = a;
-			int upperBound = b;
-
-			int guessCount = 0;
+			int a = dave.nextInt();
+			int b = dave.nextInt();
+			int c = dave.nextInt();
+			int lower = a;
+			int upper = b;
+			int count = 0;
 
 			while (true) {
 
-				int mid = (lowerBound + upperBound + 1) / 2;
+				int middle = (lower + upper + 1) / 2;
 
-				++guessCount;
+				++count;
 
-				if (mid == x) {
+				if (middle == c) {
 					break;
-				} else if (mid > x) {
-					upperBound = mid - 1;
+				} else if (middle > c) {
+					upper = middle - 1;
 				} else {
-					lowerBound = mid + 1;
+					lower = middle + 1;
 				}
 			}
 
-			if (guessCount > 1) {
-				System.out.println("Game #" + curGame + ": " + guessCount + " guesses");
+			if (count > 1) {
+				System.out.println("Game #" + i + ": " + count + " guesses");
 			} else {
-				System.out.println("Game #" + curGame + ": 1 guess");
+				System.out.println("Game #" + i + ": 1 guess");
 			}
 		}
 
 	}
 
 }
-
-
