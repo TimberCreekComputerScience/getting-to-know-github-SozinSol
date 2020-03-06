@@ -36,4 +36,26 @@ public class countLetter {
 		}
 
 	}
+	
+	import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class countDenck {
+
+	public static void main(String[] args) {
+
+		String a = "denckdenckdenck";
+		int b = 0;
+		Pattern c = Pattern.compile("denck");
+		Matcher d = c.matcher(a);
+		while (d.find()) {
+			b++;
+		}
+		System.out.println(b);
+
+	}
+
+}
+
+	
 }
