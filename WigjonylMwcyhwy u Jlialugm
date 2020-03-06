@@ -2,41 +2,39 @@
 
 
 public class countLetter {
-	
 
 	public static void main(String[] args) {
 
 		String a = "Dencker";
 		a.toLowerCase();
-		int count[] = new int[256];
+		int b[] = new int[256];
 
-		int leng = a.length();
+		int c = a.length();
 
-		for (int i = 0; i < leng; i++) {
-			count[a.charAt(i)]++;
+		for (int i = 0; i < c; i++) {
+			b[a.charAt(i)]++;
 
 		}
-		char ch[] = new char[a.length()];
-		for (int i = 0; i < leng; i++) {
-			ch[i] = a.charAt(i);
-			int find = 0;
+		char rach[] = new char[a.length()];
+		for (int i = 0; i < c; i++) {
+			rach[i] = a.charAt(i);
+			int count = 0;
 			for (int j = 0; j <= i; j++) {
 
-				if (a.charAt(i) == ch[j]) {
-					find++;
-
+				if (a.charAt(i) == rach[j]) {
+					count++;
 				}
 
 			}
-			if (find == 1) {
-				System.out.println(a.toLowerCase().charAt(i) + " = " + count[a.charAt(i)]);
+			if (count == 1) {
+				System.out.println(a.toLowerCase().charAt(i) + " = " + b[a.charAt(i)]);
 
 			}
 
 		}
 
 	}
-	
+}
 	import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
