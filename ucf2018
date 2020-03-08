@@ -44,34 +44,27 @@ public class fort {
 //pizza
 
 
-import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class pizza {
-    private static class Solver {
-        int N;
-        double S, h, w;
+	static Scanner dave = new Scanner(System.in);
 
-        void solve(int testNumber, Scanner s, PrintWriter out) {
-            N = s.nextInt();
-            S = s.nextDouble();
+	public static void main(String[] args) {
 
-           
-            h = S * Math.sqrt(3.0) / 2.0;
-            w = S + (S / 2) * (N - 1);
-            out.printf("Order #%d: %.3f%n", testNumber, h * w);
-        }
-    }
+		int fool = dave.nextInt();
+		for (int i = 0; i < fool; i++) {
+			double a = 0.0;
+			double b = 0.0;
 
-    public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        PrintWriter out = new PrintWriter(System.out);
-        Solver solver = new Solver();
-        int T = s.nextInt();
-        for (int t = 1; t <= T; t++) {
-            solver.solve(t, s, out);
-        }
-        s.close();
-        out.close();
-    }
+			int c = dave.nextInt();
+			int d = dave.nextInt();
+
+			a = d * Math.sqrt(3.0) / 2.0;
+			b = d + (d / 2) * (c - 1);
+
+			System.out.printf("Order #%d: %.3f%n", (i + 1), a * b);
+
+		}
+
+	}
 }
