@@ -57,3 +57,26 @@ public class fractions {
 	}
 }
 
+//song
+
+import java.util.Scanner;
+
+public class song {
+	static Scanner dave = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		int fool = dave.nextInt();
+		for (int i = 0; i < fool; i++) {
+			int a = dave.nextInt();
+
+			System.out.println("Stanza #" + (i + 1) + " :");
+			for (int j = 0; j < a; j++) {
+
+				System.out.println("This song's gonna get stuck inside yo'");
+			}
+			System.out.println("head");
+
+		}
+
+	}
+}
