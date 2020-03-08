@@ -24,4 +24,36 @@ public class doubling {
 	}
 }
 
-//
+//fractions
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class fractions {
+	static Scanner dave = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		int fool = dave.nextInt();
+		for (int i = 1; i <= fool; i++) {
+			int a = dave.nextInt();
+			int[] b = new int[a];
+			for (int j = 0; j < a; j++)
+				b[j] = dave.nextInt();
+
+			Arrays.sort(b);
+			boolean c = true;
+			for (int t = 1; t < a; t++)
+				c &= b[t] % b[t - 1] == 0;
+
+			if (c) {
+				System.out.println("Array #" + i + ": " + "This array is bae!");
+			} else {
+
+				System.out.println("Array #" + i + ": " + "Go away!");
+			}
+		}
+
+	}
+}
+
